@@ -1,0 +1,16 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url 'individual-posts-page' slug='the-meat' %}">
+            <img src="{% static 'blog/images/barbecue.jpg'%}" alt="Meat Eating" />
+            <div class="post__content">
+                <h3>Meat Eating</h3>
+                <p>
+                    Did you know that meat is one of the most nutrient-dense 
+                    foods in the world? :D
+                </p>
+            </div>
+        </a>
+    </article>
+</li>

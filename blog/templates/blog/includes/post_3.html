@@ -1,0 +1,16 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url 'individual-posts-page' slug='bodybuilding' %}">
+            <img src="{% static 'blog/images/bent_press.jpg'%}" alt="Bodybuilding" />
+            <div class="post__content">
+                <h3>Natural Bodybuilding</h3>
+                <p>
+                    I am a Natural Bodybuilder! Aesthetics is a fundamental part of my life,
+                    but I also want to be healthy. This is why I don't take steroids!"
+                </p>
+            </div>
+        </a>
+    </article>
+</li>

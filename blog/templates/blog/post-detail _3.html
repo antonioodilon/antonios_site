@@ -1,0 +1,39 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block title %}
+    This Post's Title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <section id='summary'>
+        <h2>Post Title</h2>
+
+        <article>
+            <img src="{% static "blog/images/barbecue.jpg" %}" alt="Post Title" />
+            <address>By Antonio</address>
+            <div>
+                Last updated on <time>February the 10th, 2022</time>
+            </div>
+        </artcile>
+    </section>
+
+    <main>
+        <p>
+            {% lorem 1 b random %}
+        </p>
+        <p>
+            {% lorem 1 b random %}
+        </p>
+        <p>
+            {% lorem 1 b random %}
+        </p>
+        <p>
+            {% lorem 1 b random %}
+        </p>
+    </main>
+{% endblock %}

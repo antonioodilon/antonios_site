@@ -1,0 +1,44 @@
+{% extends "base_template.html" %}
+{% load static %}
+
+{% block title %}
+    Antonio's Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/antonio.jpg' %}" alt="Antonio - This Blog's Author" />
+            <h2>ANTONIO'S BLOG</h2>
+        </header>
+        <p>Hi, my name is Antonio, and I am a Python programmer!</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>Who I Am</h2>
+        <p>
+            I am a programmer, a natural bodybuilder, and an enthusiast of the Keto
+            and Carnivore diets!
+        </p>
+        <p>
+            Right now I am studying Django, and intend to get to PostgreSQL in the very near
+            future!
+        </p>
+    </section>
+{% endblock %}
